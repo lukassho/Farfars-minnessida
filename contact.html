@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familjen Holmgren</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fdv8shs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="bg--blue p-3 grid row fixed-top">
+        <a href="/index.html" class="text-decoration-none col-12 text-center m-0">
+            <h1 class="m-0 h1--fs gold"> FAMILJEN HOLMGREN</h1>
+        </a>
+    </header>
+    <main class="bg--main mt-5" style="padding-bottom: 100px;">
+        <section class="grid col pt-5">
+            <h4 class="h4--fs text-center dark-blue col-10 offset-1">
+                LÅT MINNET LEVA VIDARE
+            </h4>
+            <p class="dark-blue col-10 offset-1 text-center mb-5 pb-4">
+                Vi vill att Pouls minne ska leva vidare. Det gör vi genom att dela med oss av våra fina stunder, roliga historier och minnesvärda möten med honom. Har du något sådant? 
+                Dela med dig och låt det leva vidare!
+            </p>
+            </p>
+            <div class="col-10 mb-3 mt-4 offset-1 bg--blue rounded shadow">
+                <h3 class="h3--fs text-center gold pt-4 col-12">
+                    VÅRA MINNEN
+                </h3>
+                <section class="grid row">
+                    <form action="https://formspree.io/f/xrbelyvj" method="POST" id="my-form">
+                        <div class="mb-3 col-10 offset-1">
+                            <label for="name" class="form-label mb-0 mt-2">Namn</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="(Valfritt)">
+                    
+                            <label for="relation" class="form-label mb-0 mt-2">Relation till Poul</label>
+                            <input type="text" class="form-control" id="relation" name="relation" placeholder="T.ex granne, vän, kollega...">
+                        </div>
+                        
+                        <div class="mb-3 col-10 offset-1">
+                            <label for="message" class="form-label mb-0 mt-2">Ditt minne</label>
+                            <textarea class="form-control" id="message" name="message" rows="6" maxlength="130"></textarea>
+                            <small id="char-count" class=" text-muted h4--fs">0 / 130</small>
+                            <button type="submit" class="mt-2 col-4 offset-6 rounded border-0">Skicka</button>
+                        </div>
+                    </form>
+                    <p id="my-form-status"></p>                    
+                </section>
+                
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
