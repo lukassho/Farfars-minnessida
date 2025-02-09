@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 setTimeout(() => { 
                     entry.target.classList.add("visible");
-                }, 200); // Fördröjning i millisekunder (500ms = 0.5 sekunder)
+                }, 200);
 
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.3 });
 
     fadeElements.forEach(el => {
         observer.observe(el);
