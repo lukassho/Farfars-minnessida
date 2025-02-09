@@ -10,28 +10,28 @@
     background-color: #DBDBDB;
 }
 
-.h1--fs {
+h1 {
    font-size: 20px; 
    font-family: "chapman", sans-serif;
 font-weight: 700;
 font-style: normal;
 }
 
-.h2--fs {
+h2 {
     font-size: 35px;
     font-family: "chapman", sans-serif;
 font-weight: 400;
 font-style: normal;
 }
 
-.h3--fs {
+h3 {
     font-size: 20px;
     font-family: "chapman", sans-serif;
 font-weight: 400;
 font-style: normal;
 }
 
-.h4--fs {
+h4 {
     font-size: 15px;
     font-family: "chapman", sans-serif;
 font-weight: 400;
@@ -61,6 +61,17 @@ p {
 }
 
 .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-long {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-long.visible {
     opacity: 1;
     transform: translateY(0);
 }

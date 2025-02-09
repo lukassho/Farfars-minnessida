@@ -18,3 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in-long");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => { 
+                    entry.target.classList.add("visible");
+                }, 300);
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.6 });
+
+    fadeElements.forEach(el => {
+        observer.observe(el);
+    });
+});
