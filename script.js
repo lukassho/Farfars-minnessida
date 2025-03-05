@@ -37,3 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(el);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const messageInput = document.getElementById("message");
+    const charCount = document.getElementById("char-count");
+
+    messageInput.addEventListener("input", function () {
+        const currentLength = messageInput.value.length;
+        charCount.textContent = `${currentLength} / 200`;
+    });
+});
