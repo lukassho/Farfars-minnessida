@@ -78,8 +78,8 @@ p, button {
 
 #char-count {
     position: absolute;
-    bottom: 60px; /* Justera vid behov */
-    right: 2px; /* Justera vid behov */
+    bottom: 75px; /* Justera vid behov */
+    right: 9px; /* Justera vid behov */
     font-size: 12px;
     color: #242424; /* Ljusgrå färg */
     pointer-events: none;
