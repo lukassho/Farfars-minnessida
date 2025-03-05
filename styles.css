@@ -85,6 +85,11 @@ p, button {
     pointer-events: none;
 }
 
+#message {
+    position: relative;
+    padding-bottom: 24px;
+}
+
 .carousel-control-next, .carousel-control-prev {
     bottom: 15%;
 }
