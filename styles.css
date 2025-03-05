@@ -79,3 +79,7 @@ p {
 #char-count {
     color: #DBDBDB !important;
 }
+
+.carousel-control-next, .carousel-control-prev {
+    bottom: 15%;
+}
