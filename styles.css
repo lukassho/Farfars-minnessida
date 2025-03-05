@@ -93,3 +93,18 @@ p {
 .carousel-control-next, .carousel-control-prev {
     bottom: 15%;
 }
+
+.success-message {
+    color: #DBDBDB;
+    opacity: 90%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #DBDBDB;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}

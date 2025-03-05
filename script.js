@@ -51,9 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("my-form");
     const charCount = document.getElementById("char-count");
+    const formStatus = document.getElementById("my-form-status");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Förhindrar standardbeteendet (för att kunna hantera det manuellt)
+        event.preventDefault(); // Förhindrar standardbeteendet
 
         // Skicka formuläret via Formspree
         fetch(form.action, {
@@ -66,12 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.ok) {
                 form.reset(); // Tömmer formuläret
                 charCount.textContent = "0 / 200"; // Återställ räkningen
-                document.getElementById("my-form-status").textContent = "Tack! Ditt minne har skickats.";
+                formStatus.textContent = "Tack! Ditt minne har skickats.";
+                formStatus.classList.add("success-message"); // Lägg till CSS-klass
             } else {
-                document.getElementById("my-form-status").textContent = "Något gick fel. Försök igen.";
+                formStatus.textContent = "Något gick fel. Försök igen.";
+                formStatus.classList.add("error-message"); // Lägg till CSS-klass
             }
         }).catch(error => {
-            document.getElementById("my-form-status").textContent = "Något gick fel. Försök igen.";
+            formStatus.textContent = "Något gick fel. Försök igen.";
+            formStatus.classList.add("error-message"); // Lägg till CSS-klass
         });
     });
 });
+
