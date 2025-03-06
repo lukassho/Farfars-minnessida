@@ -91,7 +91,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollToTopBtn.classList.remove("show");
             }
         });
+
+        // **Lägg till klick-event för att scrolla upp**
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Gör att den scrollar mjukt
+            });
+        });
     }
 });
+
 
 
