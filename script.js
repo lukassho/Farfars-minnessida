@@ -98,3 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("scroll", function () {
+    let arrow = document.getElementById("arrowdwn");
+    if (window.scrollY > 80) { // Om sidan scrollas ner 50px eller mer
+        arrow.style.display = "none"; // Dölj pilen
+    } else {
+        arrow.style.display = "block"; // Visa pilen igen om man scrollar upp
+    }
+});
