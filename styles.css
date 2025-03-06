@@ -139,7 +139,7 @@ p {
     background-color: #363F51; /* Lite mörkare vid hover */
 }
 
-.floating-btn.hide {
-    opacity: 0;
+.floating-btn.show {
+    opacity: 1;
     transform: translateY(0);
 }
