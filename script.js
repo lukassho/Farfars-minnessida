@@ -99,11 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+let arrow = document.getElementById("arrowdwn");
+let arrowHidden = false; // Flagga för att hålla koll på om pilen redan är dold
+
 document.addEventListener("scroll", function () {
-    let arrow = document.getElementById("arrowdwn");
-    if (window.scrollY > 80) { // Om sidan scrollas ner 50px eller mer
+    if (!arrowHidden && window.scrollY > 80) { 
         arrow.style.display = "none"; // Dölj pilen
-    } else {
-        arrow.style.display = "block"; // Visa pilen igen om man scrollar upp
+        arrowHidden = true; // Sätt flaggan så att pilen inte visas igen
     }
 });
+
