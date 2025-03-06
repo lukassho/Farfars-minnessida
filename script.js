@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", function () {
             let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if (scrollPosition > 200) {  
+            if (scrollPosition > 450) { 
                 scrollToTopBtn.classList.add("show");
             } else {
                 scrollToTopBtn.classList.remove("show");
@@ -95,18 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         scrollToTopBtn.addEventListener("click", function () {
-            smoothScrollToTop();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-
-        function smoothScrollToTop() {
-            let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-            if (scrollPosition > 0) {
-                window.scrollBy(0, -scrollPosition / 15); // Minska farten
-                requestAnimationFrame(smoothScrollToTop);
-            }
-        }
     }
 });
+
 
 
 
