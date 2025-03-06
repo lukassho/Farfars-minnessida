@@ -85,22 +85,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
         window.addEventListener("scroll", function () {
-            if (window.scrollY > 450) { 
+            let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (scrollPosition > 450) { 
                 scrollToTopBtn.classList.add("show");
             } else {
                 scrollToTopBtn.classList.remove("show");
             }
         });
 
-        // **Lägg till klick-event för att scrolla upp**
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth" // Gör att den scrollar mjukt
+                behavior: "smooth"
             });
         });
     }
 });
+
 
 
 
