@@ -108,3 +108,7 @@ p {
     text-align: center;
     margin-top: 10px;
 }
+
+.row {
+    --bs-gutter-x: 0rem;
+}
