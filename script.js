@@ -99,13 +99,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-let arrow = document.getElementById("arrowdwn");
-let arrowHidden = false; // Flagga för att hålla koll på om pilen redan är dold
-
-document.addEventListener("scroll", function () {
-    if (!arrowHidden && window.scrollY > 80) { 
-        arrow.style.display = "none"; // Dölj pilen
-        arrowHidden = true; // Sätt flaggan så att pilen inte visas igen
-    }
-});
-
